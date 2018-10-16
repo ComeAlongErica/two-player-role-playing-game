@@ -20,7 +20,7 @@ while (play === "yes") {
         userWins += 1;
         grantHealth = 10;
         console.log(`
-        User Wins: ${userWins}
+        ${name} Wins: ${userWins}
         Grant Wins: ${grantWins}
         `)
 
