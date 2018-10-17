@@ -6,17 +6,16 @@ const startGame = () => {
     let name;
     if (play === "yes") {
         name = prompt("What is your name?")
+        startCombat(play, name);
     } else if (play === "no") {
         console.log("Maybe we will play later.")
-        return;
     }
-    startCombat(play, name);
-}
+};
 
 // Generate damage
 const getDamage = () => {
     return Math.floor(Math.random() * 5) + 1;
-}
+};
 
 // If user wants to play, this function wills start combat
 const startCombat = (play, name) => {
@@ -48,13 +47,13 @@ const startCombat = (play, name) => {
             console.log(`Grant was attacked. Grant has ${grantHealth} health left.`);
 
         } else if (attackOrRun === "run") {
-            console.log("Ok, we will play later.");
+            console.log("You can run but you can't hide!");
             break;
         } else {
             console.log("Something went wrong. We only fight with clear consent! Do you want to attack or run?")
         }
     }
-}
+};
 
 startGame();
 
