@@ -13,8 +13,8 @@ const startGame = () => {
     startCombat(play, name);
 }
 
+// Generate damage
 const getDamage = () => {
-    // Generate damage
     return Math.floor(Math.random() * 5) + 1;
 }
 
@@ -23,7 +23,7 @@ const startCombat = (play, name) => {
     let grantHealth = 10;
     let userHealth = 40;
     let userWins = 0;
-    let grantWins = 0;
+    
     while (play === "yes") {
         let attackOrRun = prompt("Attack or run?")
         if (attackOrRun === "attack"){
